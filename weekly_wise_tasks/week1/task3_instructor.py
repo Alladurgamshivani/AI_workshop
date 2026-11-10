@@ -8,8 +8,8 @@ from groq import Groq
 from pydantic import BaseModel
 
 # Load the API key from the existing Task 1 .env file
-env_path = Path(__file__).resolve().parents[1] / "task1" / ".env"
-load_dotenv(env_path)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+load_dotenv(PROJECT_ROOT / ".env")
 
 api_key = os.getenv("GROQ_API_KEY")
 
